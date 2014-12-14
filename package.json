@@ -1,0 +1,18 @@
+{
+    "name": "legitimize",
+    "description": "A simple and flexible object validator.",
+    "author": {
+        "name": "Lewis Barnes"
+    },
+    "version": "0.0.1",
+    "license": "MIT",
+    "main": "./Legitimize.js",
+    "repository": {
+        "type" : "git",
+        "url": "https://github.com/lewie9021/legitimize"
+    },
+    "dependencies": {},
+    "engines": {
+        "node": "0.10.x"
+    }
+}
