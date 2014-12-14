@@ -93,6 +93,12 @@ console.log(invalid);
 
 ### Changelog
 <dl>
+    <dt>v0.0.3</dt>
+    <dd>
+        <ul>
+            <li>Fixed a bug with the require rule. Properties that aren't required but contain other rules would still be checked if the object that is being validated doesn't contain the property.</li>
+        </ul>
+    </dd>
     <dt>v0.0.2</dt>
     <dd>
         <ul>
