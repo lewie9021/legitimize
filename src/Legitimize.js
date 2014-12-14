@@ -12,6 +12,7 @@ function validate(object) {
         var rule = this.scheme[property];
         var required = (rule.required || this.defaults.required);
         var pattern = (rule.pattern || this.defaults.pattern);
+        var within = (rule.within || this.defaults.within);
         var error = (rule.error || this.defaults.error);
         var type = (rule.type || this.defaults.type);
         var use = (rule.use || this.defaults.use);
@@ -27,6 +28,10 @@ function validate(object) {
 
         if (pattern && checkType("regex", pattern) && !pattern.test(value)) {
             return (error || ("'" + property + "' failed to pass regular expression pattern"));
+        }
+
+        if (within && checkType("array", within) && within.indexOf(value) == -1) {
+            return (error || ("'" + property + "' was not found in the list"));
         }
 
         if (use && checkType("function", use) && !use(value)) {
