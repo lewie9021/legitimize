@@ -18,8 +18,9 @@ function validate(object) {
         var use = (rule.use || this.defaults.use);
         var value = object[property];
 
-        if (required && typeof object[property] === "undefined") { 
-            return (error || ("'" + property + "' is required"));
+        if (typeof object[property] === "undefined") {
+            if (required) { return (error || ("'" + property + "' is required")); }
+            continue;
         }
 
         if (type && !checkType(type, object[property])) {
