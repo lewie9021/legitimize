@@ -6,7 +6,7 @@
     },
     "version": "0.0.1",
     "license": "MIT",
-    "main": "./src/Legitimize.js",
+    "main": "./Legitimize.js",
     "repository": {
         "type" : "git",
         "url": "https://github.com/lewie9021/legitimize"
