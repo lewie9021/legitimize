@@ -38,6 +38,8 @@ function validate(object) {
             return error;
         }
     }
+
+    return null;
 };
 
 function checkType(type, value) {
